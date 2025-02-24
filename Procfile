@@ -1,1 +1,1 @@
-web: python appCodeAuth.py
+web: python3 appCodeAuth.py
