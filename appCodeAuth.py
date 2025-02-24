@@ -2,7 +2,7 @@ from flask import Flask, render_template_string, session, request, redirect, url
 import random
 import os
 app = Flask(__name__)
-app.secret_key = 'key'
+app.secret_key = os.getenv('SECRET_KEY', 'default_secret_key')
 
 USER = {
     "username": "admin",
@@ -41,5 +41,4 @@ def generate_code():
     session.clear()
     return f"code: {code}"
 if __name__ == "__main__":
-    port =int(os.getenv('PORT',8080))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0')
