@@ -41,5 +41,5 @@ def generate_code():
     session.clear()
     return f"code: {code}"
 if __name__ == "__main__":
-    port = int(os.getenv('PORT',5000))
-    app.run(host='0.0.0.0',port=port)
+    port = int(os.getenv('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
